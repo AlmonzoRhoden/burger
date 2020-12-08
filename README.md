@@ -19,6 +19,5 @@ Whenever you submit a burger's name, the app will display the burger... waiting 
 Each burger in the waiting area also has a Finish it! button. When the user clicks it, the burger will be eaten.
 
 
-<h2> Link to deployed application on Heroku</h2> https://AlmonzoRhoden.github.io
-
+<h2> Link to deployed application on Heroku</h2> https://young-falls-23307.herokuapp.com/
 
