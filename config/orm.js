@@ -1,25 +1,20 @@
-// Declaring Variables
 const connection = require('./connection.js');
-const {query} = require('express');
+const { query } = require('express');
 
 
-// Setting up object relational mapping code for sql table
-let orm = 
-{
+let orm = {
 
-    // SelectAll section
-    selectAll: function (tableInfo, cb) 
-    {
+    selectAll: function (tableInfo, cb) {
         let queryString = 'SELECT * FROM ??';
         connection.query(queryString, [tableInfo], function (err, res) {
-            if (err) {throw err };
-            console.log('Table query data succesfuly recieved from line 10');
+            if (err) { throw err };
+            console.log('Successfully sent table from database from orm.js line 10');
             console.log(tableInfo)
             cb(res);
         })
+
+
     },
-    
-    // Create section
     create: function (tableName, column, value, cb) {
         let queryString = "INSERT INTO " + tableName;
 
@@ -41,8 +36,6 @@ let orm =
             cb(res);
         })
     },
-
-    // Update section
     update: function (id, cb) {
         let queryString = `UPDATE burgers SET devoured = true WHERE id = ${id}`
         connection.query(queryString, function (err, res) {
@@ -53,8 +46,6 @@ let orm =
         })
 
     },
-    
-    // Delete section
     delete: function (table, cond, cb) {
         var queryString = "DELETE FROM " + table;
         queryString += " WHERE ";
@@ -68,7 +59,26 @@ let orm =
         })
     }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
 
-// Exporting object relational mapping code
+
 module.exports = orm;
