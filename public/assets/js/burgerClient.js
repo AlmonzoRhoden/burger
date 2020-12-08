@@ -3,7 +3,7 @@ $(document).ready( () =>
 {
 
 
-    $.ajax("/burger", {
+    $.ajax("/burgers", {
         type: "GET"
     }).then(function (res) {
 
