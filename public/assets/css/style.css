@@ -1,0 +1,26 @@
+/* Style.css */
+
+.form-control 
+{
+    margin: 20px;
+}
+
+body 
+{
+    background-color: #ffcc66;
+}
+
+h1 
+{
+    color: #ff3300;
+}
+
+.food 
+{
+    margin-top: 80px;
+}
+
+.show
+{
+    padding: 10px;
+}

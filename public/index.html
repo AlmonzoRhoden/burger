@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css">
+    <!-- Zo's stylesheet -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- Zo's favicon -->
+    <link rel="icon" href="./assets/css/favicon-16x16.png" type="image/gif" sizes="16x16">
+    <title>Almonzo's | Eat-The-Burger</title>
+</head>
+
+<body>
+    <!-- Bootstrap container-->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <br>
+                <img src="./assets/css/burger.png" alt="burger">
+                <h1>Eat-The-Burger!</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <p>Enter your favorite burger & click the "Finish it!!!" button.</p>
+                <form action="">
+                <input type="text" class="form-control" id="entryField">
+            </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center"> 
+                <button type="submit" class="btn btn-primary" id="userSbmtBtn">Finish it !!!</button>
+                <audio id="audio" src="./assets/css/MK Soundbites - Fatality!.mp3"></audio>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <p class="food">Enjoy and be safe (^-^)/</p>
+            </div>
+        </div>
+        <div class="row clickBtn">
+            <div class="col-md-6 text-center" id="devour"></div>
+            <div class="col-md-6 text-center" id="delete"></div>
+        </div>
+
+    </div>
+    <!-- Jquery code-->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <!-- JavaScript -->
+    <script src="./assets/js/burgerClient.js"></script>
+</body>
+
+</html>
