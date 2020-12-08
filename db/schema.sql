@@ -1,4 +1,3 @@
-### SCHEMA
 
 -- Creating database for burgers 
 CREATE DATABASE burgers_db;
