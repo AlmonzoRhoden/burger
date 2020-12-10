@@ -38,7 +38,7 @@ $(document).ready( () =>
     })
 
 
-
+    // Still looking to this as my burgers don't save what was eaten
     //________________________________________________________
     $('.clickBtn').on("click", ".burgerBtn", function (event) {
         let id = $(event.target).attr("data")
@@ -50,12 +50,12 @@ $(document).ready( () =>
 
         }).then(function () {
             console.log("Success")
-        })
+        
 
         $("#" + (parseInt(id - 1))).empty();
         console.log(parseInt(id - 1))
         location.reload();
-
+    })
 
 
 
