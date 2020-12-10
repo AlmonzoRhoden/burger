@@ -4,11 +4,9 @@ let app = express();
 
 const PORT = process.env.PORT || 9090;
 
-app.use(express.static('./public'));
-
 app.use(express.urlencoded({ extended: true}));
 app.use(express.json());
-
+app.use(express.static('public'));
 let routes = require('./controllers/burgers_controller')
 
 app.use(routes);

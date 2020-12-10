@@ -1,5 +1,4 @@
 const orm = require('../config/orm.js');
-const {query} = require('express');
 
 let burger = {
     // Select All data from table

@@ -1,25 +1,27 @@
+// Declaring variables - global scope
 const mysql = require('mysql');
-var connection;
 
-if (process.env.JAWSDB_URL) {
+// if/else ternary statement  - connection 
 
-    connection = mysql.createConnection(process.env.JAWSDB_URL);
-} else {
-    connection = mysql.createConnection({
+var connection = (process.env.JAWSDB_URL)?
+    // True, run this
+     mysql.createConnection(process.env.JAWSDB_URL)
+
+    //  False, run my mysql database
+    :mysql.createConnection
+   ({
         host: "localhost",
         port: 3306,
         user: 'root',
         password: 'password',
         database: 'burgers_db'
-    });
-};
+    })
 
-
-connection.connect(function (err) {
-    if (err) {
-        console.error('error connecting' + err.stack);
-        return;
-    }
-    console.log("CONNECTION id: " + connection.threadId)
-})
+    // If/else function ternary statment connection check
+connection.connect( (err) =>
+    (err)? 
+    console.error('error connecting' + err.stack)
+    :console.log("CONNECTION id: " + connection.threadId)
+)
+// Exports code to be accessed by other files
 module.exports = connection;

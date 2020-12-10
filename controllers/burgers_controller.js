@@ -3,12 +3,8 @@
 const express = require('express');
 const router = express.Router();
 const burgz = require('../models/burger.js');
-const { json } = require('express');
 
 // Get
-router.get('/', function (req, res) {
-    res.sendFile(path.join(__dirname, "public/index.html"));
-})
 
 router.get('/burger', function (req, res) {
     burgz.all(function (infoFromDatabase) {
@@ -43,7 +39,11 @@ router.delete("/burger/:id", function (req, res) {
         console.log(res)
     })
 
+})
 
+// Putting last so route is read correctly
+router.get('/', function (req, res) {
+    res.sendFile(path.join(__dirname, "public/index.html"));
 })
 
 // Exporting router code

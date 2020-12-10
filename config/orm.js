@@ -1,5 +1,4 @@
 const connection = require('./connection.js');
-const { query } = require('express');
 
 
 let orm = {
@@ -58,25 +57,6 @@ let orm = {
             cb(result)
         })
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 }
 
