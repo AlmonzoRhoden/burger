@@ -126,9 +126,9 @@ $(document).ready(function () {
 });
 
 // Unique page sounds Zo style
-window.onload = function() {
-    document.getElementById("my_audio").play();
-}
+$(document).ready(function() {
+    $("#my_audio").get(0).play();
+});
 
     function mySounds() {
         var x = Math.floor((Math.random() * 4) + 1);
