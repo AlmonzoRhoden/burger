@@ -117,8 +117,6 @@ $(document).ready(function () {
 
                 $("#" + i).append("<div class=col-md-3><button class='btn btn-primary burgerBtn'data=" + lastEntry.id + ">" + "Devour")
 
-
-
             }
         })
 
@@ -127,4 +125,31 @@ $(document).ready(function () {
 
 });
 
+// Unique page sounds Zo style
+window.onload = function() {
+    document.getElementById("my_audio").play();
+}
 
+    function mySounds() {
+        var x = Math.floor((Math.random() * 4) + 1);
+          var sound = new Audio();
+        switch (x) {
+          case 1:
+               sound.src = "./assets/css/MK Soundbites - Fatality!.mp3";
+               break;
+          case 2:
+               sound.src = "./assets/css/MK Soundbite - Outstanding!.mp3";
+               break;
+          case 3:
+               sound.src = "./assets/css/MK Soundbites - Supurb!(Shao Kahn).mp3";
+               break;
+          case 4:
+               sound.src = "./assets/css/MK Soundbites - Excellent!.mp3";
+               break;
+        }
+          sound.play();
+      }
+      
+      document.getElementById('userSbmtBtn').addEventListener('click', mySounds);
+
+      
