@@ -127,7 +127,7 @@ $(document).ready(function () {
 
 // Unique page sounds Zo style
 $(document).ready(function() {
-    $("#my_audio").get(3).play();
+    $("#my_audio").get(0).play();
 });
 
     function mySounds() {
