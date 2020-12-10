@@ -123,8 +123,8 @@ $(document).ready(function () {
         })
 
     })
+    
 
-// Button Sounds
-$('#userSbmtBtn').click( () => new Audio('./assets/css/MK Soundbites - Fatality!.mp3').play() );
 });
+
 
