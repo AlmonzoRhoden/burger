@@ -1,9 +1,6 @@
-// Jquery code 
-$(document).ready( () =>
-{
+$(document).ready(function () {
 
-
-    $.ajax("/burgers", {
+    $.ajax("/burger", {
         type: "GET"
     }).then(function (res) {
 
@@ -45,16 +42,20 @@ $(document).ready( () =>
         console.log(id)
         console.log("This was clicked");
 
+
         $.ajax("/burger/" + id, {
             type: "PUT",
 
         }).then(function () {
             console.log("Success")
-
+        })
 
         $("#" + (parseInt(id - 1))).empty();
         console.log(parseInt(id - 1))
         location.reload();
+
+
+
 
     });
 
@@ -115,6 +116,8 @@ $(document).ready( () =>
                 devourSection.append("<div class=row id=" + i + "><div class='col-md-9 text-center'><li class=show>" + lastEntry.id + ". " + lastEntry.burger_name);
 
                 $("#" + i).append("<div class=col-md-3><button class='btn btn-primary burgerBtn'data=" + lastEntry.id + ">" + "Devour")
+
+
 
             }
         })

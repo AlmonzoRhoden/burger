@@ -1,8 +1,9 @@
+// Declaring variables
 const connection = require('./connection.js');
 
 
 let orm = {
-
+    // Selecting data from table
     selectAll: function (tableInfo, cb) {
         let queryString = 'SELECT * FROM ??';
         connection.query(queryString, [tableInfo], function (err, res) {
@@ -14,6 +15,7 @@ let orm = {
 
 
     },
+    // Creating data from table
     create: function (tableName, column, value, cb) {
         let queryString = "INSERT INTO " + tableName;
 
@@ -35,6 +37,7 @@ let orm = {
             cb(res);
         })
     },
+    // Updating data from table
     update: function (id, cb) {
         let queryString = `UPDATE burgers SET devoured = true WHERE id = ${id}`
         connection.query(queryString, function (err, res) {
@@ -45,6 +48,7 @@ let orm = {
         })
 
     },
+    // Deleting data from table
     delete: function (table, cond, cb) {
         var queryString = "DELETE FROM " + table;
         queryString += " WHERE ";
@@ -60,5 +64,5 @@ let orm = {
 
 }
 
-
+// Exporting orm code for access
 module.exports = orm;

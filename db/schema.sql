@@ -1,5 +1,3 @@
--- Dropping duplicating database if exist
-DROP DATABASE IF EXISTS burgers_db; 
 
 -- Creating database for burgers 
 CREATE DATABASE burgers_db;
