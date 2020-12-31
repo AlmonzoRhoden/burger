@@ -1,4 +1,4 @@
-<h1 align = "center" > HW #13 Eat-The-Burger </h1>
+<h1 align = "center" > Eat-The-Burger </h1>
 
 <h2>Preview of application<h2>
 
